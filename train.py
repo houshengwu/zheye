@@ -42,7 +42,7 @@ def character_to_image(c):
     
     im = im.rotate(angle, expand=1)
     width, height = im.size
-    im = im.resize((int(width *scale), int(height*scale)), Image.ANTIALIAS)
+    im = im.resize((int(width *scale), int(height*scale)), Image.BICUBIC)
     width, height = im.size
 
     bg = Image.new("RGBA", (160, 160), (255,255,255,255))
